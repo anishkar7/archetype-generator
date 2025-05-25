@@ -53,7 +53,7 @@ app.post('/api/submit', async (req, res) => {
                 <p>Your archetype is: <strong>${description}</strong></p>
                 <p>Score: ${score}</p>
                 <p>Thank you for taking the quiz!</p>
-                <p>Visit our site again to explore more: <a href="https://your-netlify-site.netlify.app">Archetype Calculator</a></p>
+                <p>Visit our site again to explore more: <a href="https://archetypegenerator.netlify.app/">Archetype Calculator</a></p>
             `
         };
         await transporter.sendMail(mailOptions);
