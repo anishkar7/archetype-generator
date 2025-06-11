@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetype Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Discover Your Inner Archetype</h1>
+            <p>Uncover your personality with our interactive quiz! We'll email your results.</p>
+        </header>
+
+        <!-- User Details Form -->
+        <section id="user-details" class="fade-in">
+            <h2>Enter Your Details</h2>
+            <form id="user-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" style="display: none;" class="fade-in">
+            <h2>Your Archetype Quest</h2>
+            <div class="progress-bar">
+                <div id="progress" style="width: 0%;"></div>
+            </div>
+            <form id="quiz-form">
+                <div class="question">
+                    <p>1. How do you approach challenges?</p>
+                    <label><input type="radio" name="q1" value="warrior" required> Tackle them with determination.</label><br>
+                    <label><input type="radio" name="q1" value="sage"> Analyze and plan carefully.</label><br>
+                    <label><input type="radio" name="q1" value="king"> Lead others to overcome them.</label><br>
+                    <label><input type="radio" name="q1" value="lover"> Approach with creativity.</label><br>
+                    <label><input type="radio" name="q1" value="explorer"> Seek new ways to solve them.</label><br>
+                    <label><input type="radio" name="q1" value="creator"> Innovate unique solutions.</label>
+                </div>
+                <div class="question">
+                    <p>2. What drives you most?</p>
+                    <label><input type="radio" name="q2" value="warrior" required> Achieving goals through effort.</label><br>
+                    <label><input type="radio" name="q2" value="sage"> Gaining wisdom and insight.</label><br>
+                    <label><input type="radio" name="q2" value="king"> Inspiring and leading others.</label><br>
+                    <label><input type="radio" name="q2" value="lover"> Connecting emotionally.</label><br>
+                    <label><input type="radio" name="q2" value="explorer"> Discovering new experiences.</label><br>
+                    <label><input type="radio" name="q2" value="creator"> Creating something new.</label>
+                </div>
+                <div class="question">
+                    <p>3. How do you make decisions?</p>
+                    <label><input type="radio" name="q3" value="warrior" required> With courage and instinct.</label><br>
+                    <label><input type="radio" name="q3" value="sage"> Through careful reasoning.</label><br>
+                    <label><input type="radio" name="q3" value="king"> Considering the group’s needs.</label><br>
+                    <label><input type="radio" name="q3" value="lover"> Following your heart.</label><br>
+                    <label><input type="radio" name="q3" value="explorer"> Seeking adventure and risk.</label><br>
+                    <label><input type="radio" name="q3" value="creator"> With innovative thinking.</label>
+                </div>
+                <div class="question">
+                    <p>4. What’s your ideal environment?</p>
+                    <label><input type="radio" name="q4" value="warrior" required> High-energy, action-packed.</label><br>
+                    <label><input type="radio" name="q4" value="sage"> Quiet, reflective spaces.</label><br>
+                    <label><input type="radio" name="q4" value="king"> Organized, leadership-driven.</label><br>
+                    <label><input type="radio" name="q4" value="lover"> Creative and inspiring.</label><br>
+                    <label><input type="radio" name="q4" value="explorer"> Open, adventurous spaces.</label><br>
+                    <label><input type="radio" name="q4" value="creator"> Dynamic, innovative settings.</label>
+                </div>
+                <div class="question">
+                    <p>5. How do you inspire others?</p>
+                    <label><input type="radio" name="q5" value="warrior" required> Through bold action.</label><br>
+                    <label><input type="radio" name="q5" value="sage"> By sharing wisdom.</label><br>
+                    <label><input type="radio" name="q5" value="king"> By leading confidently.</label><br>
+                    <label><input type="radio" name="q5" value="lover"> Through emotional connection.</label><br>
+                    <label><input type="radio" name="q5" value="explorer"> By encouraging exploration.</label><br>
+                    <label><input type="radio" name="q5" value="creator"> Through creative ideas.</label>
+                </div>
+                <div class="question">
+                    <p>6. What’s your greatest strength?</p>
+                    <label><input type="radio" name="q6" value="warrior" required> Resilience.</label><br>
+                    <label><input type="radio" name="q6" value="sage"> Insight.</label><br>
+                    <label><input type="radio" name="q6" value="king"> Leadership.</label><br>
+                    <label><input type="radio" name="q6" value="lover"> Empathy.</label><br>
+                    <label><input type="radio" name="q6" value="explorer"> Curiosity.</label><br>
+                    <label><input type="radio" name="q6" value="creator"> Creativity.</label>
+                </div>
+                <div class="question">
+                    <p>7. How do you handle conflict?</p>
+                    <label><input type="radio" name="q7" value="warrior" required> Confront it directly.</label><br>
+                    <label><input type="radio" name="q7" value="sage"> Seek understanding first.</label><br>
+                    <label><input type="radio" name="q7" value="king"> Mediate with authority.</label><br>
+                    <label><input type="radio" name="q7" value="lover"> Resolve with compassion.</label><br>
+                    <label><input type="radio" name="q7" value="explorer"> Find new perspectives.</label><br>
+                    <label><input type="radio" name="q7" value="creator"> Innovate solutions.</label>
+                </div>
+                <div class="question">
+                    <p>8. What’s your role in a group?</p>
+                    <label><input type="radio" name="q8" value="warrior" required> The doer.</label><br>
+                    <label><input type="radio" name="q8" value="sage"> The thinker.</label><br>
+                    <label><input type="radio" name="q8" value="king"> The leader.</label><br>
+                    <label><input type="radio" name="q8" value="lover"> The connector.</label><br>
+                    <label><input type="radio" name="q8" value="explorer"> The adventurer.</label><br>
+                    <label><input type="radio" name="q8" value="creator"> The innovator.</label>
+                </div>
+                <div class="question">
+                    <p>9. What’s your life philosophy?</p>
+                    <label><input type="radio" name="q9" value="warrior" required> Action creates change.</label><br>
+                    <label><input type="radio" name="q9" value="sage"> Knowledge is power.</label><br>
+                    <label><input type="radio" name="q9" value="king"> Lead by example.</label><br>
+                    <label><input type="radio" name="q9" value="lover"> Love drives connection.</label><br>
+                    <label><input type="radio" name="q9" value="explorer"> Explore to grow.</label><br>
+                    <label><input type="radio" name="q9" value="creator"> Create your reality.</label>
+                </div>
+                <div class="question">
+                    <p>10. What legacy do you want to leave?</p>
+                    <label><input type="radio" name="q10" value="warrior" required> A story of courage.</label><br>
+                    <label><input type="radio" name="q10" value="sage"> A legacy of wisdom.</label><br>
+                    <label><input type="radio" name="q10" value="king"> A world led well.</label><br>
+                    <label><input type="radio" name="q10" value="lover"> Bonds of love.</label><br>
+                    <label><input type="radio" name="q10" value="explorer"> Paths discovered.</label><br>
+                    <label><input type="radio" name="q10" value="creator"> Creations that inspire.</label>
+                </div>
+                <button type="submit">Reveal Your Archetype</button>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" style="display: none;" class="fade-in">
+            <h2>Your Archetype</h2>
+            <div id="result-container">
+                <img id="result-image" src="" alt="Archetype Image" style="display: none;">
+                <p id="result-text"></p>
+                <p id="email-status"></p>
+            </div>
+            <button onclick="restartQuiz()">Try Again</button>
+            <button onclick="shareResult()">Share Result</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
